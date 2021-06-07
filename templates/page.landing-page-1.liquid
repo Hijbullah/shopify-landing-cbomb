@@ -1,15 +1,12 @@
 {% layout 'landing' %}
 
-
 <div>
-    <h1>{{ page.title }}</h1>
+    <h1 class="sr-only">{{ page.title }}</h1>
      
-    <div>
-        {{ page.content }}
-    </div>
-
     {% comment %}
         Add your landig page section here
     {% endcomment %}
+
+    {% section 'landing-page-hero' %}
 
 </div>

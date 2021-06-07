@@ -1,0 +1,43 @@
+<div 
+    style="background-image: url({{ section.settings.hero_banner_image | img_url: 'master' }});" 
+    class="px-16 py-64 relative h-full w-full bg-center bg-cover">
+        <h2 class="absolute top-16 left-1/2 transform -translate-x-1/2 text-white text-4xl text-center uppercase tracking-wide">{{ section.settings.brand_name }}</h2>
+        <div>
+            <h4 class="text-white text-5xl font-bold tracking-wide">{{ section.settings.heading }}</h4>
+            <p class="mt-3 text-white text-xl">{{ section.settings.sub_heading }}</p>
+        </div>
+
+</div>
+
+
+{% schema %}
+    {
+        "name": "Hero Banner",
+        "tag": "section",
+        "settings": [
+            {
+                "id": "brand_name",
+                "type": "text",
+                "label": "Brand Name",
+                "default": "Your Brand Name"
+            },
+            {
+                "id": "heading",
+                "type": "text",
+                "label": "Heading",
+                "default": "Your Landing page Heading"
+            },
+            {
+                "id": "sub_heading",
+                "type": "text",
+                "label": "Sub Heading",
+                "default": "Your sub heading"
+            },
+            {
+                "id": "hero_banner_image",
+                "type": "image_picker",
+                "label": "Background Image"
+            }
+        ]
+    }
+{% endschema %}
